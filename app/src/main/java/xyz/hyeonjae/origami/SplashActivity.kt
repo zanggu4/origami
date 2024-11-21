@@ -48,7 +48,7 @@ class SplashActivity : ComponentActivity() {
                     },
                     modifier = Modifier.fillMaxSize()
                 ) { innerPadding ->
-                    Body(modifier = Modifier.padding(innerPadding))
+                    SplashBody(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -56,7 +56,7 @@ class SplashActivity : ComponentActivity() {
 }
 
 @Composable
-fun Body(modifier: Modifier = Modifier) {
+fun SplashBody(modifier: Modifier = Modifier) {
     Row(
         modifier = Modifier
             .fillMaxSize()
@@ -72,20 +72,13 @@ fun Body(modifier: Modifier = Modifier) {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun SplashPreview() {
     OrigamiTheme {
         Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-            Body(modifier = Modifier.padding(innerPadding))
+            SplashBody(modifier = Modifier.padding(innerPadding))
         }
     }
 }
