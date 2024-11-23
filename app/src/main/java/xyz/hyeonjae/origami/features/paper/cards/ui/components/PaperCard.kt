@@ -1,4 +1,4 @@
-package xyz.hyeonjae.origami.ui.components
+package xyz.hyeonjae.origami.features.paper.cards.ui.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
 import xyz.hyeonjae.origami.R
-import xyz.hyeonjae.origami.ui.viewdata.PaperCardViewData
+import xyz.hyeonjae.origami.features.paper.cards.ui.viewdata.PaperCardViewData
 import kotlin.math.ceil
 
 @Composable

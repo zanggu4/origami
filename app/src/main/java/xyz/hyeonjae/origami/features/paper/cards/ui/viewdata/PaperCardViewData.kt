@@ -1,4 +1,4 @@
-package xyz.hyeonjae.origami.ui.viewdata
+package xyz.hyeonjae.origami.features.paper.cards.ui.viewdata
 
 data class PaperCardViewData(
     val id: Int,
