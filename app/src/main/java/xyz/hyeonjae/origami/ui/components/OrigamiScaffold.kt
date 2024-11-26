@@ -15,12 +15,15 @@ import xyz.hyeonjae.origami.ui.theme.OrigamiTheme
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun OrigamiScaffold(
+    modifier: Modifier = Modifier,
     isAppBarHidden: Boolean = false,
     title: String? = null,
-    content: @Composable (PaddingValues) -> Unit
+    content: @Composable (paddingValues: PaddingValues) -> Unit
 ) {
     OrigamiTheme {
         Scaffold(
+            modifier = modifier
+                .fillMaxSize(),
             topBar = {
                 if (!isAppBarHidden) {
                     TopAppBar(
@@ -30,13 +33,14 @@ fun OrigamiScaffold(
                         ),
                         title = {
                             if (title != null) {
-                                Text(title)
+                                Text(
+                                    text = title,
+                                )
                             }
                         }
                     )
                 }
             },
-            modifier = Modifier.fillMaxSize()
         ) { innerPadding ->
             content(innerPadding)
         }
